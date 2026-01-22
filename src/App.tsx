@@ -5,6 +5,7 @@ import { useState } from "react";
 
 
 
+
 export interface PokemonData {
   id: string;
   name: string;
@@ -63,7 +64,7 @@ export default function App() {
             <option value="Grass">Grass</option>
             <option value="Ground">Ground</option>
             <option value="Ice">Ice</option>
-            <option value="Normal">Normal</option>
+            <option value="Colorless">Colorless</option>
             <option value="Poison">Poison</option>
             <option value="Psychic">Psychic</option>
             <option value="Rock">Rock</option>
@@ -76,6 +77,7 @@ export default function App() {
       {filteredPokemons.map((pokemon) => (
         <Pokemon
           key={pokemon.id}
+          id={pokemon.id}
           name={pokemon.name}
           price={pokemon.price}
           stock={pokemon.stock}
